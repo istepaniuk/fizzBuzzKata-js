@@ -10,5 +10,10 @@ describe("FizzBuzz", function() {
     it("returns Buzz for 5", function(){
         expect(fb.fizzBuzz(5)).toEqual("Buzz");
     });
+
+    it("returns Fizz for other numbers divisible by 3", function(){
+        expect(fb.fizzBuzz(6)).toEqual("Fizz");
+        expect(fb.fizzBuzz(9)).toEqual("Fizz");
+    });
 });
 
