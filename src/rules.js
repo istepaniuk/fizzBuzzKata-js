@@ -7,20 +7,16 @@ window.fb = window.fb || {};
         BUZZ = "Buzz",
         FIZZ_BUZZ = "FizzBuzz";
 
-    var FIZZ_DIVS = [3],
-        BUZZ_DIVS = [5],
-        FIZZ_BUZZ_DIVS = [3,5];
-
     var orderedRules = {
-        fizzBuzz: { 
+        whenDivisibleByBoth3And5: { 
             returns: FIZZ_BUZZ, 
-            condition: divisibleByListCondition(FIZZ_BUZZ_DIVS) },
-        fizz: { 
+            condition: divisibleByListCondition([3,5]) },
+        whenDivisibleBy3: { 
             returns: FIZZ, 
-            condition: divisibleByListCondition(FIZZ_DIVS) },
-        buzz: { 
+            condition: divisibleByListCondition([3]) },
+        whenDivisibleBy5: { 
             returns: BUZZ, 
-            condition: divisibleByListCondition(BUZZ_DIVS) },
+            condition: divisibleByListCondition([5]) },
         };
     
     function divisibleByListCondition(divisors){
