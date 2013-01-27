@@ -28,5 +28,9 @@ describe("FizzBuzz", function() {
         expect(fb.fizzBuzz(2)).toEqual(2);
         expect(fb.fizzBuzz(4)).toEqual(4);
     });
+
+    it("returns FizzBuzz for numbers that are divisible by both 5 and 3", function(){
+        expect(fb.fizzBuzz(15)).toEqual("FizzBuzz");
+    });
 });
 
