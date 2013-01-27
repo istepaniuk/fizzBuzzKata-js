@@ -4,9 +4,13 @@
     function fizzBuzz(input){
         if (input == 5)
             return "Buzz";
-        if (input % 3 == 0) 
+        if (isDivisibleBy3(input)) 
             return "Fizz";
         return 1;
+    }
+
+    function isDivisibleBy3(x){
+        return x % 3 == 0;
     }
     
     window.fb = window.fb || {};
