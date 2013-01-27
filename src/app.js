@@ -18,6 +18,17 @@ window.fb = window.fb || {};
             numberListWidget = widget;
         }
     }
+
+    function ListWidget(domId){
+        var $el = $("#" + domId);
+
+        this.showList = function(list){
+            $.each(list, function(key, val){
+                var $item = $("<li>", {text: val});
+                $el.append($item);
+            });
+        };
+    }
     
     function Sequence(qty){
         var self = this;
@@ -39,4 +50,5 @@ window.fb = window.fb || {};
 
     fb.Sequence = Sequence;
     fb.FizzBuzzInteractor = FizzBuzzInteractor;
+    fb.ListWidget = ListWidget;
 }(window.fb));
