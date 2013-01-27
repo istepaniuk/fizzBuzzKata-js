@@ -10,4 +10,13 @@ describe("List Widget", function(){
         domContents = $("#" + domId).html();
         expect(domContents).toContain("98");
     });
+
+    it("creates it's DOM element if it does not exist", function(){
+        var domId = "number-list"
+
+        fb.ListWidget(domId);
+
+        expect($("#"+domId).length).toBeGreaterThan(0);
+        $("#"+domId).empty();
+    });
 });
