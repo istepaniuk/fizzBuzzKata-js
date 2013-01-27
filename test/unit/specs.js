@@ -1,6 +1,6 @@
 describe("FizzBuzz", function() {
-	it("Fails",function(){
-		expect(1).toEqual(2);
+	it("returns 1 for 1",function(){
+		expect(fizzBuzz(1)).toEqual(1);
 	});
 });
 
