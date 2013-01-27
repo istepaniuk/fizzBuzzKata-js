@@ -1,7 +1,9 @@
 (function(window, undefined) {
     "use  strict";
 
-    function fizzBuzz(){
+    function fizzBuzz(input){
+        if (input == 3) 
+            return "Fizz";
         return 1;
     }
     
