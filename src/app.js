@@ -2,7 +2,7 @@
     "use  strict";
 
     function fizzBuzz(input){
-        if (input % 5 == 0)
+        if (isDivisibleBy5(input))
             return "Buzz";
         if (isDivisibleBy3(input)) 
             return "Fizz";
@@ -11,6 +11,10 @@
 
     function isDivisibleBy3(x){
         return x % 3 == 0;
+    }
+    
+    function isDivisibleBy5(x){
+        return x % 5 == 0;
     }
     
     window.fb = window.fb || {};
