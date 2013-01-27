@@ -13,11 +13,27 @@ window.fb = window.fb || {};
 
         this.attachSequenceGenerator = function (seqGen){
             sequenceGenerator = seqGen;
-        }
+        };
+
         this.attachNumberListWidget = function (widget) {
             numberListWidget = widget;
-        }
+        };
+    
+        this.get = function(){
+            return {
+                numberListWidget: numberListWidget,
+                sequenceGenerator: sequenceGenerator
+            };
+        };
+    }
+
+    function createFizzBuzzInteractor(){
+        var interactor = new FizzBuzzInteractor();
+        interactor.attachNumberListWidget(new fb.ListWidget("number-list"));
+        interactor.attachSequenceGenerator(new fb.Sequence());
+        return interactor; 
     }
 
     fb.FizzBuzzInteractor = FizzBuzzInteractor;
+    fb.createFizzBuzzInteractor = createFizzBuzzInteractor;
 }(window.fb));
