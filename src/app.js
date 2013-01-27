@@ -6,7 +6,7 @@
             return "Buzz";
         if (isDivisible(input, 3)) 
             return "Fizz";
-        return 1;
+        return input;
     }
 
     function isDivisible(x, by){
