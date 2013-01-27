@@ -34,3 +34,13 @@ describe("FizzBuzz", function() {
     });
 });
 
+describe("Number sequence", function(){
+    it("contains 1 when asked one number", function(){
+        var sequence = new fb.Sequence(),
+            qty = 1;
+
+        var result = sequence.generate(qty);
+
+        expect(result).toContain(1);
+    });
+});
