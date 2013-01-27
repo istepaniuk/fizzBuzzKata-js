@@ -2,6 +2,18 @@ window.fb = window.fb || {};
 
 (function(fb, undefined) {
     "use  strict";
+
+    function FizzBuzzInteractor(){
+        var sequenceGenerator;
+
+        this.start = function(){
+            sequenceGenerator.generate(100);
+        };
+
+        this.attachSequenceGenerator = function (seqGen){
+            sequenceGenerator = seqGen;
+        }
+    }
     
     function Sequence(qty){
         var self = this;
@@ -22,4 +34,5 @@ window.fb = window.fb || {};
     }
 
     fb.Sequence = Sequence;
+    fb.FizzBuzzInteractor = FizzBuzzInteractor;
 }(window.fb));
