@@ -1,13 +1,17 @@
 (function(window, undefined) {
     "use  strict";
-
+    
+    var FIZZ = "Fizz",
+        BUZZ = "Buzz",
+        FIZZ_BUZZ = "FizzBuzz";
+    
     function fizzBuzz(input){
         if (isDivisible(input, 5) && isDivisible(input, 3))
-            return "FizzBuzz";
+            return FUZZ_BUZZ;
         if (isDivisible(input, 5))
-            return "Buzz";
+            return BUZZ;
         if (isDivisible(input, 3)) 
-            return "Fizz";
+            return FIZZ;
         return input;
     }
 
