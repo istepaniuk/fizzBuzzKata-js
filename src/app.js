@@ -21,10 +21,14 @@
 
     function isDivisibleByList(x, divisorList){
         for(var i = 0; i < divisorList.length; i++){
-            if(x % divisorList[i] != 0) 
+            if(isNotDivisible(x, divisorList[i])) 
                 return false;
         }
         return true;
+    }
+
+    function isNotDivisible(x, by){
+        return x % by != 0;
     }
 
     window.fb = window.fb || {};
