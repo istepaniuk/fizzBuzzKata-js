@@ -4,13 +4,16 @@
     var FIZZ = "Fizz",
         BUZZ = "Buzz",
         FIZZ_BUZZ = "FizzBuzz";
+
+    var FIZZ_DIV = 3,
+        BUZZ_DIV = 5;
     
     function fizzBuzz(input){
-        if (isDivisible(input, 5) && isDivisible(input, 3))
-            return FUZZ_BUZZ;
-        if (isDivisible(input, 5))
+        if (isDivisible(input, BUZZ_DIV) && isDivisible(input, FIZZ_DIV))
+            return FIZZ_BUZZ;
+        if (isDivisible(input, BUZZ_DIV))
             return BUZZ;
-        if (isDivisible(input, 3)) 
+        if (isDivisible(input, FIZZ_DIV)) 
             return FIZZ;
         return input;
     }
