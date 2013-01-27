@@ -5,11 +5,7 @@ window.fb = window.fb || {};
 
     function ListWidget(domId){
         var $el = $("#" + domId);
-
-        if($el.length == 0){
-            $el = $("<ul>", {id: domId});
-            $("body").append($el);
-        }   
+        createDomElementIfIdNotFound();
 
         this.showList = function(list){
             $.each(list, function(key, val){
@@ -17,6 +13,13 @@ window.fb = window.fb || {};
                 $el.append($item);
             });
         };
+
+        function createDomElementIfIdNotFound(){
+            if($el.length == 0){
+                $el = $("<ul>", {id: domId});
+                $("body").append($el);
+            }   
+        }
     }
     
     fb.ListWidget = ListWidget;
