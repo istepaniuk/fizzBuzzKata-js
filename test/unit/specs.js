@@ -35,9 +35,14 @@ describe("FizzBuzz", function() {
 });
 
 describe("Number sequence", function(){
+    var sequence, qty;
+
+    beforeEach(function(){
+        sequence = new fb.Sequence();
+    });
+
     it("contains 1 when asked one number", function(){
-        var sequence = new fb.Sequence(),
-            qty = 1;
+        qty = 1;
 
         var result = sequence.generate(qty);
 
@@ -45,8 +50,7 @@ describe("Number sequence", function(){
     });
 
     it("contains 1 and 2 when asked for two numbers", function(){
-        var sequence = new fb.Sequence(),
-            qty = 2;
+        qty = 2;
 
         var result = sequence.generate(qty);
 
