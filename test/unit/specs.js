@@ -43,4 +43,14 @@ describe("Number sequence", function(){
 
         expect(result).toContain(1);
     });
+
+    it("contains 1 and 2 when asked for two numbers", function(){
+        var sequence = new fb.Sequence(),
+            qty = 2;
+
+        var result = sequence.generate(qty);
+
+        expect(result).toContain(1);
+        expect(result).toContain(2);
+    });
 });
