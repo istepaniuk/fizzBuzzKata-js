@@ -5,6 +5,10 @@ describe("FizzBuzz", function() {
 
     it("returns Fizz for 3", function(){
         expect(fb.fizzBuzz(3)).toEqual("Fizz");
-    })
+    });
+
+    it("returns Buzz for 5", function(){
+        expect(fb.fizzBuzz(5)).toEqual("Buzz");
+    });
 });
 
