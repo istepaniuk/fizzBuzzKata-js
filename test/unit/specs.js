@@ -57,4 +57,15 @@ describe("Number sequence", function(){
         expect(result).toContain(1);
         expect(result).toContain(2);
     });
+
+    it("proccess the numbers with an attached processor", function(){
+        qty = 3;
+        proc = function(){return "XXX"};
+        sequence.attachProcessor(proc);
+
+        var result = sequence.generate(qty);
+
+        expect(result).toContain("XXX"); 
+        expect(result.length).toBe(qty);
+    });
 });
