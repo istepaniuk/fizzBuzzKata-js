@@ -20,5 +20,10 @@ describe("FizzBuzz", function() {
         expect(fb.fizzBuzz(20)).toEqual("Buzz");
         expect(fb.fizzBuzz(10)).toEqual("Buzz");
     });
+
+    it("returns the input for other numbers not divisible by either 5 or 3", function(){
+        expect(fb.fizzBuzz(2)).toEqual(2);
+        expect(fb.fizzBuzz(4)).toEqual(4);
+    });
 });
 
