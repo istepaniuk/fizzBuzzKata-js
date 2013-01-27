@@ -1,4 +1,6 @@
-(function(window, undefined) {
+window.fb = window.fb || {};
+
+(function(fb, undefined) {
     "use  strict";
     
     function fizzBuzz(input){
@@ -10,6 +12,5 @@
         return input;
     }
 
-    window.fb = window.fb || {};
-    window.fb.fizzBuzz = fizzBuzz;
-}(window))
+    fb.fizzBuzz = fizzBuzz;
+}(window.fb));

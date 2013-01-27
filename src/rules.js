@@ -1,4 +1,6 @@
-(function(window, undefined) {
+window.fb = window.fb || {};
+
+(function(fb, undefined) {
     "use  strict";
     
     var FIZZ = "Fizz",
@@ -39,6 +41,5 @@
         return x % by != 0;
     }
 
-    window.fb = window.fb || {};
-    window.fb.fizzBuzzRules = orderedRules;
-}(window))
+    fb.fizzBuzzRules = orderedRules;
+}(window.fb));
