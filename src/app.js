@@ -2,6 +2,8 @@
     "use  strict";
 
     function fizzBuzz(input){
+        if (input == 5)
+            return "Buzz";
         if (input == 3) 
             return "Fizz";
         return 1;
