@@ -2,15 +2,15 @@ describe("FizzBuz interactor", function(){
     var interactor, seqGenerator, listWidget;
     
     beforeEach(function(){
-        interactor = new fb.FizzBuzzInteractor();
-        seqGenerator = new fb.Sequence();      
-        listWidget = { showList: function(){} };
-        interactor.attachSequenceGenerator(seqGenerator);
-        interactor.attachNumberListWidget(listWidget);
+        interactor = fb.createFizzBuzzInteractor();
+        seqGenerator = interactor.get().sequenceGenerator;
+        listWidget = interactor.get().numberListWidget;
     });
 
     it("asks for a sequence of 100 numbers", function(){
-        spyOn(seqGenerator,"generate");
+        spyOn(seqGenerator, "generate").andCallFake(function(){
+            return [];
+        });
        
         interactor.start();
 
@@ -19,8 +19,7 @@ describe("FizzBuz interactor", function(){
 
     it("tells a widget to print the generated sequence", function(){
         var list = ["xxx", "yyy"];
-        var seqGenerator = { generate: function(){ return list }};
-        interactor.attachSequenceGenerator(seqGenerator);
+        seqGenerator.generate = function(){ return list };
         spyOn(listWidget, "showList");
 
         interactor.start();
