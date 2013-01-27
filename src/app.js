@@ -8,15 +8,31 @@
     var FIZZ_DIVS = [3],
         BUZZ_DIVS = [5],
         FIZZ_BUZZ_DIVS = [3,5];
+
+    var orderedRules = {
+        fizzBuzz: { 
+            returns: FIZZ_BUZZ, 
+            condition: divisibleByListCondition(FIZZ_BUZZ_DIVS) },
+        fizz: { 
+            returns: FIZZ, 
+            condition: divisibleByListCondition(FIZZ_DIVS) },
+        buzz: { 
+            returns: BUZZ, 
+            condition: divisibleByListCondition(BUZZ_DIVS) },
+        };
     
     function fizzBuzz(input){
-        if (isDivisibleByList(input, FIZZ_BUZZ_DIVS))
-            return FIZZ_BUZZ;
-        if (isDivisibleByList(input, BUZZ_DIVS))
-            return BUZZ;
-        if (isDivisibleByList(input, FIZZ_DIVS)) 
-            return FIZZ;
+        for(var i in orderedRules){
+            if(orderedRules[i].condition(input))
+                return orderedRules[i].returns;
+        }
         return input;
+    }
+
+    function divisibleByListCondition(divisors){
+        return function(x) {
+            return isDivisibleByList(x, divisors);
+        };
     }
 
     function isDivisibleByList(x, divisorList){
