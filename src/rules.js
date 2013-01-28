@@ -17,12 +17,21 @@ window.fb = window.fb || {};
         whenDivisibleBy5: { 
             returns: BUZZ, 
             condition: divisibleByListCondition([5]) },
+        whenItContainsTheDigit3: {
+            returns :FIZZ,
+            condition: containsDigitCondition(3) }
         };
     
     function divisibleByListCondition(divisors){
         return function(x) {
             return isDivisibleByList(x, divisors);
         };
+    }
+
+    function containsDigitCondition(digit){
+        return function(x){
+            return (x.toString().indexOf(digit) >= 0);
+        }
     }
 
     function isDivisibleByList(x, divisorList){
