@@ -32,4 +32,10 @@ describe("FizzBuzz", function() {
     it("returns FizzBuzz for numbers that are divisible by both 5 and 3", function(){
         expect(fb.fizzBuzz(15)).toEqual("FizzBuzz");
     });
+
+
+    it("returns Fizz for numbers that contain the digit 3", function(){
+        expect(fb.fizzBuzz(13)).toEqual(FIZZ);
+        expect(fb.fizzBuzz(23)).toEqual(FIZZ);
+    });
 });
