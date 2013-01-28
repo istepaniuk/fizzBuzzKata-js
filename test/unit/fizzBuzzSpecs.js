@@ -33,9 +33,15 @@ describe("FizzBuzz", function() {
         expect(fb.fizzBuzz(15)).toEqual("FizzBuzz");
     });
 
+    //Stage 2 ->
 
     it("returns Fizz for numbers that contain the digit 3", function(){
         expect(fb.fizzBuzz(13)).toEqual(FIZZ);
         expect(fb.fizzBuzz(23)).toEqual(FIZZ);
+    });
+
+    it("returns Buzz for numbers that contain the digit 5" , function(){
+        expect(fb.fizzBuzz(58)).toEqual(BUZZ);
+        expect(fb.fizzBuzz(56)).toEqual(BUZZ);
     });
 });
