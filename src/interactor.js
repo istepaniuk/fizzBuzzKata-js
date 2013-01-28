@@ -29,8 +29,10 @@ window.fb = window.fb || {};
 
     function createFizzBuzzInteractor(){
         var interactor = new FizzBuzzInteractor();
+        var sequence = new fb.Sequence();
+        sequence.attachProcessor(fb.fizzBuzz);
+        interactor.attachSequenceGenerator(sequence);
         interactor.attachNumberListWidget(new fb.ListWidget("number-list"));
-        interactor.attachSequenceGenerator(new fb.Sequence());
         return interactor; 
     }
 
