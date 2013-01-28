@@ -30,8 +30,12 @@ window.fb = window.fb || {};
 
     function containsDigitCondition(digit){
         return function(x){
-            return (x.toString().indexOf(digit) >= 0);
-        }
+            return containsDigit(x, digit);
+        };
+    }
+    
+    function containsDigit(x, digit){
+        return (x.toString().indexOf(digit) >= 0);
     }
 
     function isDivisibleByList(x, divisorList){
