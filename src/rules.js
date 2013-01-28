@@ -19,7 +19,10 @@ window.fb = window.fb || {};
             condition: divisibleByListCondition([5]) },
         whenItContainsTheDigit3: {
             returns :FIZZ,
-            condition: containsDigitCondition(3) }
+            condition: containsDigitCondition(3) },
+        whenItContainsTheDigit5: {
+            returns :BUZZ,
+            condition: containsDigitCondition(5) }
         };
     
     function divisibleByListCondition(divisors){
